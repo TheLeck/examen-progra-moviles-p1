@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "examen", "examen\examen.csproj", "{81258D04-F953-4D65-BBDD-0260761B4568}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{D1F34001-6FE4-48A8-8B84-12DA207C0F3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81258D04-F953-4D65-BBDD-0260761B4568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81258D04-F953-4D65-BBDD-0260761B4568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81258D04-F953-4D65-BBDD-0260761B4568}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{81258D04-F953-4D65-BBDD-0260761B4568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81258D04-F953-4D65-BBDD-0260761B4568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81258D04-F953-4D65-BBDD-0260761B4568}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9ADC484B-1EA9-427D-96F7-F13341E6C46F}
+	EndGlobalSection
+EndGlobal
