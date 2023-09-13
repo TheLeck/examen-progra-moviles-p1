@@ -2,10 +2,15 @@
 {
     public partial class MainPage : ContentPage
     {
-        private void getName()
+        private void getName() //iniciar todo en la barra superior
         {
             var Tienda = Preferences.Default.Get("nameTienda", "Tienda");
             title.Text = Tienda;
+            var ur = Preferences.Default.Get("urlTienda", "");
+            if (ur != "")
+            {
+                imglogo.Source = ImageSource.FromUri(new Uri(ur));
+            }
         }
         public MainPage()
         {
