@@ -27,5 +27,10 @@
         {
             await Navigation.PushAsync(new Preferencia());
         }
+
+        private async void showclient_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Clientes());
+        }
     }
 }
