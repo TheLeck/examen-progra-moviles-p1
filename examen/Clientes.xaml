@@ -26,14 +26,16 @@
                             <StackLayout Orientation="Horizontal" Padding="2" BackgroundColor="Beige">
                                 <StackLayout WidthRequest="5" BackgroundColor="Chocolate"></StackLayout>
                                 <Label Text="{Binding id}"/>
-                                <Image WidthRequest="100" Source="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png"/>
+                                <Image WidthRequest="100" Source="{Binding foto}"/>
                                 <StackLayout Padding="15,0">
                                     <Label Text="Nombre" FontAttributes="Bold"/>
                                     <Label Text="{Binding nombre}"/>
-                                    <Label Text="Usuario" FontAttributes="Bold"/>
-                                    <Label Text="{Binding usuario}"/>
-                                    <Label Text="Contraseña" FontAttributes="Bold"/>
-                                    <Label Text="{Binding contrasena}" />
+                                    <Label Text="Direccion" FontAttributes="Bold"/>
+                                    <Label Text="{Binding direccion}"/>
+                                    <Label Text="Telefono" FontAttributes="Bold"/>
+                                    <Label Text="{Binding telefono}"/>
+                                    <Label Text="Correo" FontAttributes="Bold"/>
+                                    <Label Text="{Binding correo}"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
