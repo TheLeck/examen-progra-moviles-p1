@@ -29,7 +29,7 @@ public partial class Clientes : ContentPage
         var client = new HttpClient();
         //Asignamos la URL
         client.BaseAddress = new Uri(url);
-        //Llamada asíncrona al sitio
+        //Llamada asÃ­ncrona al sitio
         var response = await client.GetAsync(client.BaseAddress);
         //Nos aseguramos de recibir una respuesta satisfactoria
         response.EnsureSuccessStatusCode();

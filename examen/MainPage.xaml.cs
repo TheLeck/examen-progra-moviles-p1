@@ -22,12 +22,15 @@
             base.OnAppearing();
             getName();
         }
-
         private async void imgbtnconf_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Preferencia());
         }
-
+        
+        private async void productos_clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Productos());
+        }
         private async void showclient_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Clientes());

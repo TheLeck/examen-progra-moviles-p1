@@ -54,10 +54,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Preferencia.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Clientes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Preferencia.xaml">
+	  <MauiXaml Update="Productos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
