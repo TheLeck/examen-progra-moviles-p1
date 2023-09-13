@@ -52,7 +52,7 @@
                 Text="Clientes"
                 SemanticProperties.Hint="Counts the number of times you click"
                 BackgroundColor="Green"
-                Clicked="clientes_clicked"
+                Clicked="showclient_Clicked"
                 
                 HorizontalOptions="Center" />
             <Button
@@ -61,7 +61,6 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 BackgroundColor="Blue"
                 Clicked="productos_clicked"
-                
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>
