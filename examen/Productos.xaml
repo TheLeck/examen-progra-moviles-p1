@@ -35,9 +35,9 @@
                                     <Label Text="Cantidad" FontAttributes="Bold" TextColor="Black"/>
                                     <Label Text="{Binding cantidad}" TextColor="Black"/>
                                     <Label Text="Precio de Costo" FontAttributes="Bold" TextColor="Black"/>
-                                    <Label Text="{Binding costo}" TextColor="Black"/>
+                                    <Label Text="{Binding preciocosto}" TextColor="Black"/>
                                     <Label Text="Precio de Venta" FontAttributes="Bold" TextColor="Black"/>
-                                    <Label Text="{Binding venta}" TextColor="Black"/>
+                                    <Label Text="{Binding precioventa}" TextColor="Black"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>

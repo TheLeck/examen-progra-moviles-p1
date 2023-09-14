@@ -13,8 +13,8 @@ public partial class ModificarProductos : ContentPage
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public string cantidad { get; set; }
-        public string costo { get; set; }
-        public string venta { get; set; }
+        public string preciocosto { get; set; }
+        public string precioventa { get; set; }
         public string foto { get; set; }
     }
 
@@ -30,8 +30,8 @@ public partial class ModificarProductos : ContentPage
         nombre.Text = producto.nombre;
         descripcion.Text = producto.descripcion;
         cantidad.Text = producto.cantidad;
-        costo.Text = producto.costo;
-        venta.Text = producto.venta;
+        costo.Text = producto.preciocosto;
+        venta.Text = producto.precioventa;
         url.Text = producto.foto;
         iduno = producto.id;
         img.Source = ImageSource.FromUri(new Uri(url.Text));

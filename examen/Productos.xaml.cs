@@ -13,8 +13,8 @@ public partial class Productos : ContentPage
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public string cantidad { get; set; }
-        public string costo { get; set; }
-        public string venta { get; set; }
+        public string preciocosto { get; set; }
+        public string precioventa { get; set; }
         public string foto { get; set; }
     }
 
@@ -75,8 +75,8 @@ public partial class Productos : ContentPage
             product.descripcion = datos[index].descripcion;
             product.cantidad = datos[index].cantidad;
             product.foto = datos[index].foto;
-            product.costo = datos[index].costo;
-            product.venta = datos[index].venta;
+            product.preciocosto = datos[index].preciocosto;
+            product.precioventa = datos[index].precioventa;
             // Serializar el objeto Cliente
             XmlSerializer serializer = new XmlSerializer(typeof(Producto));
             StringWriter sw = new StringWriter();

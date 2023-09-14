@@ -41,7 +41,7 @@ public partial class AgregarProductos : ContentPage
     {
         try
         {
-            _ = llamadaGetJsonAsync($"https://hjqwpru.000webhostapp.com/insertproducts.php?snombre={nombre.Text}&descripcion={descripcion.Text}&cantidad={cantidad.Text}&preciocosto={costo.Text}&precioventa={venta.Text}&foto={url.Text}");
+            _ = llamadaGetJsonAsync($"https://hjqwpru.000webhostapp.com/insertproducts.php?nombre={nombre.Text}&descripcion={descripcion.Text}&cantidad={cantidad.Text}&preciocosto={costo.Text}&precioventa={venta.Text}&foto={url.Text}");
             await Navigation.PopAsync();
 
         }
