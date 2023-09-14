@@ -10,7 +10,7 @@
                 <Label Text="Lista de Clientes" HorizontalTextAlignment="Center" TextColor="#6456b7" FontSize="36"/>
             </Frame>
             
-            <Button Text="Agregar usuarios"  
+            <Button Text="Agregar cliente"  
                     CornerRadius="5"
                     TextColor="White" 
                     HeightRequest="60"

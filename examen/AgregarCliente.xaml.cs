@@ -1,3 +1,4 @@
+
 using System.Collections.ObjectModel;
 
 namespace examen;
@@ -8,6 +9,10 @@ public partial class AgregarCliente : ContentPage
 	{
 		InitializeComponent();
 	}
+    private void tienda_Completed(object sender, EventArgs e)
+    {
+        img.Source = ImageSource.FromUri(new Uri(url.Text));
+    }
     public class Cliente
     {
         public int id { get; set; }

@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using System.Xml.Serialization;
 
 namespace examen;
 
@@ -65,7 +66,20 @@ public partial class Clientes : ContentPage
         }
         if (action == "Editar")
         {
-            await DisplayAlert("Mensaje", "Seleccionó editar", "ok");
+            var cliente = new Cliente();
+            cliente.id= datos[index].id;
+            cliente.nombre = datos[index].nombre;
+            cliente.direccion = datos[index].direccion;
+            cliente.correo = datos[index].correo;
+            cliente.foto = datos[index].foto;
+            cliente.telefono = datos[index].telefono;
+            // Serializar el objeto Cliente
+            XmlSerializer serializer = new XmlSerializer(typeof(Cliente));
+            StringWriter sw = new StringWriter();
+            serializer.Serialize(sw, cliente);
+            string xml = sw.ToString();
+
+            await Navigation.PushAsync(new ModificarCliente(xml));
         }
     }
 

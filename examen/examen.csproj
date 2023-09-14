@@ -57,6 +57,9 @@
 	  <MauiXaml Update="AgregarCliente.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ModificarCliente.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Preferencia.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

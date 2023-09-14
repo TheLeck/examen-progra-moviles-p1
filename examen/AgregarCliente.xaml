@@ -14,7 +14,18 @@
             <Label Text="Correo" Margin="15,0"/>
             <Entry x:Name="correo" Margin="15,0"/>
             <Label Text="URL de imagen" Margin="15,0"/>
-            <Entry x:Name="url" Margin="15,0"/>
+            <HorizontalStackLayout>
+                <Entry x:Name="url" Margin="15,0"
+                       HeightRequest="50"
+                        WidthRequest="800"
+                       Completed="tienda_Completed"/>
+                <Image
+                x:Name="img"
+                HeightRequest="200"
+                WidthRequest="200"
+                />  
+            </HorizontalStackLayout>
+            
             <Button Text="Agregar" CornerRadius="24" BackgroundColor="Orange" Clicked="aceptar" Margin="15,1"/>
         </VerticalStackLayout>
     </ScrollView>
