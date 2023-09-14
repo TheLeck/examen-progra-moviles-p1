@@ -14,7 +14,7 @@ public partial class ModificarProductos : ContentPage
         public string descripcion { get; set; }
         public string cantidad { get; set; }
         public string preciocosto { get; set; }
-        public string precioventa { get; set; }
+        public string precioventa { get; set; } // igual que en bd
         public string foto { get; set; }
     }
 
