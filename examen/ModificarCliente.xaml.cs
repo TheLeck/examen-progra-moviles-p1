@@ -37,7 +37,7 @@ public partial class ModificarCliente : ContentPage
     }
     private void tienda_Completed(object sender, EventArgs e)
     {
-        img.Source = ImageSource.FromUri(new Uri(url.Text));
+        img.Source = ImageSource.FromUri(new Uri(url.Text)); 
     }
 
     public async Task llamadaGetJsonAsync(string url)
@@ -50,18 +50,6 @@ public partial class ModificarCliente : ContentPage
         var response = await client.GetAsync(client.BaseAddress);
         //Nos aseguramos de recibir una respuesta satisfactoria
         response.EnsureSuccessStatusCode();
-        //Convertimos la respuesta a una variable string
-        //var jsonResult = response.Content.ReadAsStringAsync().Result;
-        // titulo.Text = jsonResult;
-        //Se deserializa la cadena y se convierte en una instancia de WeatherResult
-        //var listado = Newtonsoft.Json.JsonConvert.DeserializeObject<ObservableCollection<Cliente>>(jsonResult);
-        //Asignamos el nuevo valor de las propiedades
-        //datos = listado;
-        //titulo.Text = listado.Count.ToString();
-        //Console.WriteLine("Numero de usuarios:"+listado.Count);
-        //milista.ItemsSource = null;
-        //milista.ItemsSource = datos;
-        //foreach (Usuario element in listado.)
     }
 
     private async void Button_Clicked(object sender, EventArgs e)
