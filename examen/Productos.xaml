@@ -3,10 +3,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="examen.Productos"
              Title="Productos">
-    <VerticalStackLayout>
-        <Label 
-            Text="¨Productos"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <StackLayout Padding="5">
+            <Frame BackgroundColor="White" Padding="24" CornerRadius="4" BorderColor="White">
+                <Label Text="Lista de Productos" HorizontalTextAlignment="Center" TextColor="#6456b7" FontSize="36"/>
+            </Frame>
+
+            <Button Text="Agregar productos"  
+                    CornerRadius="5"
+                    TextColor="White" 
+                    HeightRequest="60"
+                    Clicked="agregar_producto"
+                    />
+
+            <ListView x:Name="milista"
+                ItemTapped="milista_ItemTapped"
+                SeparatorColor="Coral"
+                Margin="15,1" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="2" BackgroundColor="Beige">
+                                <StackLayout WidthRequest="5" BackgroundColor="Chocolate"></StackLayout>
+                                <Label Text="{Binding id}"/>
+                                <Image WidthRequest="100" Source="{Binding foto}"/>
+                                <StackLayout Padding="15,0">
+                                    <Label Text="Nombre" FontAttributes="Bold" TextColor="Black"/>
+                                    <Label Text="{Binding nombre}" TextColor="Black"/>
+                                    <Label Text="Descripcion" FontAttributes="Bold" TextColor="Black"/>
+                                    <Label Text="{Binding descripcion}" TextColor="Black"/>
+                                    <Label Text="Cantidad" FontAttributes="Bold" TextColor="Black"/>
+                                    <Label Text="{Binding cantidad}" TextColor="Black"/>
+                                    <Label Text="Precio de Costo" FontAttributes="Bold" TextColor="Black"/>
+                                    <Label Text="{Binding costo}" TextColor="Black"/>
+                                    <Label Text="Precio de Venta" FontAttributes="Bold" TextColor="Black"/>
+                                    <Label Text="{Binding venta}" TextColor="Black"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
