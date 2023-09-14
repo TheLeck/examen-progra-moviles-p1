@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen.AgregarProductos"
+             Title="AgregarProductos">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Nombre:" Margin="15,0"/>
+            <Entry x:Name="nombre" Margin="15,0"/>
+            <Label Text="Descripcion:" Margin="15,0"/>
+            <Entry x:Name="descripcion" Margin="15,0"/>
+            <Label Text="Cantidad:" Margin="15,0"/>
+            <Entry Keyboard="Numeric" x:Name="cantidad" Margin="15,0"/>
+            <Label Text="Precio de Costo:" Margin="15,0"/>
+            <Entry Keyboard="Numeric" x:Name="costo" Margin="15,0"/>
+            <Label Text="Precio de Venta:" Margin="15,0"/>
+            <Entry Keyboard="Numeric" x:Name="venta" Margin="15,0"/>
+            <Label Text="URL de imagen" Margin="15,0"/>
+            <HorizontalStackLayout>
+                <Entry x:Name="url" Margin="15,0"
+                       HeightRequest="50"
+                        WidthRequest="800"
+                       Completed="tienda_Completed"/>
+                <Image
+                x:Name="img"
+                HeightRequest="200"
+                WidthRequest="200"
+                />
+            </HorizontalStackLayout>
+
+            <Button Text="Agregar" CornerRadius="24" BackgroundColor="Orange" Clicked="aceptar" Margin="15,1"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

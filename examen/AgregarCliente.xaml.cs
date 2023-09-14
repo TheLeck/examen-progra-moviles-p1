@@ -57,7 +57,7 @@ public partial class AgregarCliente : ContentPage
         }
             catch
             {
-                DisplayAlert("Mensa", "Error al tratar de conectarse", "ok");
+                await DisplayAlert("Mensa", "Error al tratar de conectarse", "ok");
             }
     }
 }
