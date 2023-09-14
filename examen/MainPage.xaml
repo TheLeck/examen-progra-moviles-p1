@@ -12,7 +12,7 @@
                        WidthRequest="40"
                     />
             </HorizontalStackLayout>
-            <ImageButton Source="dotnet_bot.png"
+            <ImageButton Source="ajus.png"
                         Margin="5, 0, 5, 0"
                 x:Name="imgbtnconf"
                 Clicked="imgbtnconf_Clicked"
@@ -29,7 +29,7 @@
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
+                x:Name="imglogomenu"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />

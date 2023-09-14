@@ -2,11 +2,12 @@
 {
     public partial class MainPage : ContentPage
     {
+        public string ur;
         private void getName() //iniciar todo en la barra superior
         {
             var Tienda = Preferences.Default.Get("nameTienda", "Tienda");
             title.Text = Tienda;
-            var ur = Preferences.Default.Get("urlTienda", "");
+            ur = Preferences.Default.Get("urlTienda", "");
             if (ur != "")
             {
                 imglogo.Source = ImageSource.FromUri(new Uri(ur));
@@ -21,6 +22,7 @@
         { 
             base.OnAppearing();
             getName();
+            imglogomenu.Source = ImageSource.FromUri(new Uri(ur));
         }
         private async void imgbtnconf_Clicked(object sender, EventArgs e)
         {

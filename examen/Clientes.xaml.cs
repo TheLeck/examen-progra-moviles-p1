@@ -1,3 +1,4 @@
+using Microsoft.VisualBasic;
 using System.Collections.ObjectModel;
 using System.Xml.Serialization;
 
@@ -15,7 +16,10 @@ public partial class Clientes : ContentPage
         public string foto {  get; set; }
     }
 
+
     ObservableCollection<Cliente> datos = new ObservableCollection<Cliente>();
+
+    ObservableCollection<Cliente> datostemp = new ObservableCollection<Cliente>();
 
     public Clientes()
 	{
@@ -27,10 +31,12 @@ public partial class Clientes : ContentPage
     {
         base.OnAppearing();
         Button_Clicked();
+        
     }
 
     public async Task llamadaGetJsonAsync(string url)
     {
+        for(var i = 0; i != 2; i++) {
         //Creamos una instancia de HttpClient
         var client = new HttpClient();
         //Asignamos la URL
@@ -50,6 +56,7 @@ public partial class Clientes : ContentPage
         //Console.WriteLine("Numero de usuarios:"+listado.Count);
         milista.ItemsSource = null;
         milista.ItemsSource = datos;
+        }
         //foreach (Usuario element in listado.)
     }
 

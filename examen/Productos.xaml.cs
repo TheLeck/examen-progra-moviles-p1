@@ -34,26 +34,29 @@ public partial class Productos : ContentPage
 
     public async Task llamadaGetJsonAsync(string url)
     {
-        //Creamos una instancia de HttpClient
-        var client = new HttpClient();
-        //Asignamos la URL
-        client.BaseAddress = new Uri(url);
-        //Llamada asíncrona al sitio
-        var response = await client.GetAsync(client.BaseAddress);
-        //Nos aseguramos de recibir una respuesta satisfactoria
-        response.EnsureSuccessStatusCode();
-        //Convertimos la respuesta a una variable string
-        var jsonResult = response.Content.ReadAsStringAsync().Result;
-        // titulo.Text = jsonResult;
-        //Se deserializa la cadena y se convierte en una instancia de WeatherResult
-        var listado = Newtonsoft.Json.JsonConvert.DeserializeObject<ObservableCollection<Producto>>(jsonResult);
-        //Asignamos el nuevo valor de las propiedades
-        datos = listado;
-        //titulo.Text = listado.Count.ToString();
-        //Console.WriteLine("Numero de usuarios:"+listado.Count);
-        milista.ItemsSource = null;
-        milista.ItemsSource = datos;
-        //foreach (Usuario element in listado.)
+        for (var i = 0; i != 2; i++)
+        {
+            //Creamos una instancia de HttpClient
+            var client = new HttpClient();
+            //Asignamos la URL
+            client.BaseAddress = new Uri(url);
+            //Llamada asíncrona al sitio
+            var response = await client.GetAsync(client.BaseAddress);
+            //Nos aseguramos de recibir una respuesta satisfactoria
+            response.EnsureSuccessStatusCode();
+            //Convertimos la respuesta a una variable string
+            var jsonResult = response.Content.ReadAsStringAsync().Result;
+            // titulo.Text = jsonResult;
+            //Se deserializa la cadena y se convierte en una instancia de WeatherResult
+            var listado = Newtonsoft.Json.JsonConvert.DeserializeObject<ObservableCollection<Producto>>(jsonResult);
+            //Asignamos el nuevo valor de las propiedades
+            datos = listado;
+            //titulo.Text = listado.Count.ToString();
+            //Console.WriteLine("Numero de usuarios:"+listado.Count);
+            milista.ItemsSource = null;
+            milista.ItemsSource = datos;
+            //foreach (Usuario element in listado.)
+        }
     }
 
     private async void milista_ItemTapped(object sender, ItemTappedEventArgs e)
