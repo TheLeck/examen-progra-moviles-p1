@@ -22,6 +22,11 @@ public partial class Clientes : ContentPage
         Button_Clicked();
 
     }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        Button_Clicked();
+    }
 
     public async Task llamadaGetJsonAsync(string url)
     {
@@ -47,14 +52,28 @@ public partial class Clientes : ContentPage
         //foreach (Usuario element in listado.)
     }
 
-    private void milista_ItemTapped(object sender, ItemTappedEventArgs e)
+    private async void milista_ItemTapped(object sender, ItemTappedEventArgs e)
     {
         var myListView = (ListView)sender;
         var myItem = myListView.SelectedItem;
         int index = datos.IndexOf((Cliente)myItem);
-        DisplayAlert("Usuario", "Nombre: " + datos[index].nombre + "\nUsuario" + datos[index].nombre, "ok");
+        string action = await DisplayActionSheet("Acciones:", "Cancelar", null, "Eliminar", "Editar");
+        if (action == "Eliminar")
+        {
+            _ = llamadaGetJsonAsync($"https://hjqwpru.000webhostapp.com/eliminar.php?id={datos[index].id}");
+            Button_Clicked();
+        }
+        if (action == "Editar")
+        {
+            await DisplayAlert("Mensaje", "Seleccionó editar", "ok");
+        }
     }
-    
+
+    private async void agregar_cliente(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AgregarCliente());
+    }
+
     private void Button_Clicked()
     {
         try

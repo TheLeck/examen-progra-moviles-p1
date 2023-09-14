@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen.AgregarCliente"
+             Title="AgregarCliente">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Nombre:" Margin="15,0"/>
+            <Entry x:Name="nombre" Margin="15,0"/>
+            <Label Text="Dirección" Margin="15,0"/>
+            <Entry x:Name="direccion" Margin="15,0"/>
+            <Label Text="Telefono" Margin="15,0"/>
+            <Entry x:Name="telefono" Margin="15,0"/>
+            <Label Text="Correo" Margin="15,0"/>
+            <Entry x:Name="correo" Margin="15,0"/>
+            <Label Text="URL de imagen" Margin="15,0"/>
+            <Entry x:Name="url" Margin="15,0"/>
+            <Button Text="Agregar" CornerRadius="24" BackgroundColor="Orange" Clicked="aceptar" Margin="15,1"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
